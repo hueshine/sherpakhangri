@@ -1,0 +1,23 @@
+
+$green: #8dc63f;
+$blue : #16574f;
+$grey: #333333;
+
+.g_section{
+    height: 300vh;
+    background-color: #8dc63f;
+    .gsap_text{
+        padding: 180px ;
+        text-align: center;
+        h1{
+            color: #ffffff;
+            margin: 0;
+        }
+    }
+    &:nth-child(2n){
+        background-color: $blue;
+    }
+    &:nth-child(3n){
+        background-color: $grey;
+    }
+}

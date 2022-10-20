@@ -1,0 +1,23 @@
+.g_section {
+  height: 300vh;
+  background-color: #8dc63f;
+}
+
+.g_section .gsap_text {
+  padding: 180px;
+  text-align: center;
+}
+
+.g_section .gsap_text h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+.g_section:nth-child(2n) {
+  background-color: #16574f;
+}
+
+.g_section:nth-child(3n) {
+  background-color: #333333;
+}
+/*# sourceMappingURL=page.css.map */

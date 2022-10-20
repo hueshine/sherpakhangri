@@ -1,0 +1,258 @@
+.header2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: 0.8s;
+
+  // &:hover {
+  //   &::before {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+
+  //   .nav {
+  //     ul {
+  //       li {
+  //         a {
+  //           color: #333;
+  //         }
+
+  //         img {
+  //           border: 5px solid #fff;
+  //           transition: 0.8s;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   background-color: #fff;
+  //   width: 100%;
+  //   height: 79%;
+  //   transition: 0.8s;
+  //   opacity: 0;
+  //   transform: translateY(-100px);
+  // }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 10px 0;
+
+    ul {
+      display: flex;
+      margin-top: 0;
+      position: relative;
+      // padding-top: 50px;
+
+      &:last-child {
+        justify-content: end;
+
+        li {
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          display: none;
+        }
+      }
+
+      li {
+        padding: 0 24px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        a {
+          font-weight: 600;
+          font-size: 17px;
+          text-transform: uppercase;
+          color: #f9f9f9;
+          transition: 0.5s;
+          position: relative;
+          text-shadow: 1px 3px 1px rgba(72, 65, 65, 0.2);
+
+          &::after {
+            position: absolute;
+            transition: 0.5s;
+            width: 0%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: #8dc63f;
+            content: "";
+          }
+
+          &:hover {
+            color: #8dc63f;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        img {
+          width: 110px;
+          background: #fff;
+          border-radius: 50%;
+          transition: 0.8s;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.header1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  .header-wrap {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 118px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    nav {
+      .navigation {
+        li {
+          margin: 22px;
+          display: flex;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #ffffff;
+            letter-spacing: -0.1px;
+          }
+
+          img {
+            margin-left: 8px;
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #00000033;
+      z-index: 0;
+    }
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 80%;
+    // left: 11%;
+    transform: translateY(-80%);
+    width: 680px;
+    z-index: 1;
+
+    h3 {
+      font-size: 82px;
+      line-height: 80px;
+      font-weight: 400;
+      letter-spacing: -0.6px;
+      color: #ffffff;
+      text-shadow: 1px 3px 1px rgba(72, 65, 65, 0.5);
+    }
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    position: relative;
+    width: 250px;
+    height: 250px;
+
+    img {
+      position: absolute;
+      top: 0;
+      width: 80%;
+
+      &.rotate_border {
+        animation: rotating 18s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
