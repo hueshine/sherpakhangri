@@ -231,6 +231,7 @@
     .treks_wrapper{
         display: flex;
         flex-wrap: wrap;
+        margin-top: 48px;
         padding: 0 56px;
         .trek_wrap{
             overflow: hidden;
@@ -776,3 +777,129 @@ footer {
   }
 }
 
+
+
+
+
+.testimonial {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+	position: relative;
+  height: 100vh;
+	overflow: hidden;
+  // background: linear-gradient(180deg, #e3efee, transparent);
+  
+    .slider-wrapper{
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        .slider-slide {
+            
+            padding: 0;
+            margin-right:  120px;
+            width: 768px;
+            text-align: center;
+
+            &:last-child{
+              margin-right: 0;
+            }
+    
+              .icon {
+                width: 64px;
+                margin: 0 auto 80px auto;
+    
+                img {
+                  width: 100%;
+                }
+              }
+    
+              .quote {
+                width: 768px;
+                p {
+                  font-size: 20px;
+                }
+              }
+    
+              .author {
+                img {
+                  width: 120px;
+                  height: 120px;
+                  object-fit: cover;
+                  margin: 32px 0 20px 0;
+                  border-radius: 50%;
+                }
+    
+                .info {
+                  h4 {
+                    font-weight: 600;
+                    font-family: "Archeron Pro";
+                    margin-bottom: 4px;
+                  }
+    
+                  h5 {
+                    margin: 0;
+                  }
+                }
+              }
+          }
+    }
+
+    .pagination{
+      position: absolute;
+      bottom: 4%;
+      .slider-link{
+        margin-right: 16px;
+        span{
+          padding: 8px;
+          background-color: transparent;
+          border: 1px solid #8dc63f;
+          border-radius: 50%;
+          transition: 0.4s;
+          svg{
+            width: 20px;
+            color: #8dc63f;
+            transition: 0.4s;
+          }
+        }
+        &:hover{
+          span{
+            background-color: #71bf44;
+            svg{
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+// .dot-anim{
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+
+//   .testimonial{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//   }
+
+//   .dot{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   .news_updates{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }

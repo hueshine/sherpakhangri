@@ -53,7 +53,7 @@ if (introMain) {
 }
 
 
-
+// testimonials
 const interleaveOffset = 0.75;
 
 var swiper = new Swiper('.swiper-container', {
@@ -99,12 +99,38 @@ var swiper = new Swiper('.swiper-container', {
 
 var swiper = new Swiper('.exp_slider', {
     slidesPerView: 3,
-    // spaceBetween: 30,
     grabCursor: true,
-    // loop: true,
     speed: 500,
     pagination: {
       el: '.slider__pagination',
       clickable: true,
     }
 });
+
+const $container = $('.testimonial ');
+const $items = $('.slider-wrapper');
+
+const getMaxWidthHeight = function () {
+  maxWidth = $items.width();
+  maxHeight = $items.height();
+};
+getMaxWidthHeight();
+
+ScrollTrigger.addEventListener("refreshInit", getMaxWidthHeight);
+
+var tl = gsap.timeline()
+.to($items, { x: function () {return -maxWidth}})
+
+  gsap.timeline({
+    ease: 'linear',
+    scrollTrigger: {
+      trigger: $container,
+      pin: true,
+      pinSpacing: true,
+      end: function() { return '+=' + maxWidth},
+      scrub: 2,
+      invalidateOnRefresh: true
+    }
+  }).add(tl)
+
+
